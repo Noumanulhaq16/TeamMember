@@ -17,6 +17,7 @@ import CustomerLoginForm from '../../sections/auth/login/AgentLoginForm';
 // Images
 import LoginBack from '../../assets/image/LoginBack.jpeg'
 import Team from '../../assets/image/logo_full.png';
+import LoginSide from '../../assets/image/LoginSide.jpg';
 
 // ----------------------------------------------------------------------
 
@@ -87,12 +88,9 @@ export default function CustomerLogin() {
 
         {mdUp && (
           <SectionStyle>
-            <Typography variant="h3" sx={{ px: 5, mt: 10, mb: 5 }}>
-            Team Track
-            </Typography>
             <Image
               alt="login"
-              src={Team}
+              src={LoginSide}
             />
           </SectionStyle>
         )}
