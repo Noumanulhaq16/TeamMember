@@ -5,16 +5,16 @@ import HeaderBreadcrumbs from '../../components/HeaderBreadcrumbs';
 import { PATH_ADMIN } from '../../routes/paths';
 import ConApproval from '../../sections/@SuperAdmin/ConApproval';
 
-export default function Customerapproval() {
+export default function Salemanapproval() {
     const { themeStretch } = useSettings();
     return (
-        <Page title="Admin: Contractor Approval">
+        <Page title="Admin: Saleman Approval">
             <Container maxWidth={themeStretch ? false : 'xl'}>
                 <HeaderBreadcrumbs
-                    heading="Contractor Approval"
+                    heading="Saleman Approval"
                     links={[
                         { name: 'Dashboard', href: PATH_ADMIN.root },
-                        { name: 'Contractor Approval' },
+                        { name: 'Saleman Approval' },
                     ]}
                 />
                 <ConApproval />

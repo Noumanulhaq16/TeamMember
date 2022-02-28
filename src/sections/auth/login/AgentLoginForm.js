@@ -33,8 +33,8 @@ export default function CustomerLoginForm() {
 
 
   const defaultValues = {
-    email: 'customer@Teams.com',
-    password: '12345678',
+    email: '',
+    password: '',
     remember: true,
   };
 

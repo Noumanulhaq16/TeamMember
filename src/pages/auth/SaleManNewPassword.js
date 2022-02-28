@@ -14,7 +14,7 @@ import { NewPasswordForm } from '../../sections/auth/new-password';
 // assets
 import { SentIcon } from '../../assets';
 // Images
-import LoginBack from '../../assets/image/LoginBack.jpeg'
+import LoginBack from '../../assets/image/AgentLogin.jpg'
 
 // ----------------------------------------------------------------------
 
@@ -35,7 +35,9 @@ export default function NewPassword() {
   return (
     <Page title="Reset Password" sx={{
       height: 1,
-      backgroundImage: `url(${LoginBack})`
+      backgroundImage: `url(${LoginBack})`,
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: 'cover'
     }}>
       <RootStyle>
         <LogoOnlyLayout />

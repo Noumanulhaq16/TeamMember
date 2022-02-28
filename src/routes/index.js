@@ -70,7 +70,7 @@ export default function Router() {
           path: 'login',
           element: (
             <GuestGuard>
-              <CustomerLogin />
+              <AgentLogin />
             </GuestGuard>
           ),
         },
@@ -85,7 +85,7 @@ export default function Router() {
         { path: 'reset-password', element: <ResetPassword /> },
         { path: 'new-password', element: <NewPassword /> },
         { path: 'verify', element: <VerifyCode /> },
-        // Customer Routes
+        // Agent Routes
         {
           path: 'panel',
           element: (
@@ -95,7 +95,8 @@ export default function Router() {
           ),
           children: [
             { element: <Navigate to={PATH_AFTER_AGENT_LOGIN} replace />, index: true },
-            { path: 'dashboard', element: <CustomerDashboard /> },
+            { path: 'dashboard', element: <AgentDashboard /> },
+            { path: 'profile', element: <AgentProfilee /> },
           ],
         },
       ],
@@ -163,7 +164,7 @@ export default function Router() {
           children: [
             { element: <Navigate to={PATH_AFTER_SUPERADMIN_LOGIN} replace />, index: true },
             { path: 'dashboard', element: <SuperDashboard /> },
-            { path: 'agentapproval', element: <SACustomerApproval /> },
+            { path: 'agentapproval', element: <SAAgentApproval /> },
             { path: 'salemanapproval', element: <ContractorApproval /> },
           ],
         },
@@ -199,7 +200,7 @@ export default function Router() {
 
 //  Authentication
 const AdminLogin = Loadable(lazy(() => import('../pages/auth/AdminLogin')));
-const CustomerLogin = Loadable(lazy(() => import('../pages/auth/AgentLogin')));
+const AgentLogin = Loadable(lazy(() => import('../pages/auth/AgentLogin')));
 const ContractorLogin = Loadable(lazy(() => import('../pages/auth/SaleManLogin')));
 const SuperAdminLogin = Loadable(lazy(() => import('../pages/auth/SuperAdminLogin')));
 const Register = Loadable(lazy(() => import('../pages/auth/AgentRegister')));
@@ -215,8 +216,9 @@ const HomePage = Loadable(lazy(() => import('../pages/Home')));
 // Admin
 const AdminDashboard = Loadable(lazy(() => import('../pages/admin/Dashboard')));
 
-// Customer
-const CustomerDashboard = Loadable(lazy(() => import('../pages/agents/Dashboard')));
+// Agent
+const AgentDashboard = Loadable(lazy(() => import('../pages/agents/Dashboard')));
+const AgentProfilee = Loadable(lazy(() => import('../pages/agents/AgentProfilee')));
 
 
 
@@ -225,7 +227,7 @@ const ContractorDashboard = Loadable(lazy(() => import('../pages/saleman/Dashboa
 
 // Super Admin
 const SuperDashboard = Loadable(lazy(() => import('../pages/superadmin/Dashboard')));
-const SACustomerApproval = Loadable(lazy(() => import('../pages/superadmin/CustomerApproval')));
+const SAAgentApproval = Loadable(lazy(() => import('../pages/superadmin/CustomerApproval')));
 const ContractorApproval = Loadable(lazy(() => import('../pages/superadmin/ContractorApproval')));
 // Main
 const ComingSoon = Loadable(lazy(() => import('../pages/ComingSoon')));

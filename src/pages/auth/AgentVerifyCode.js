@@ -12,7 +12,7 @@ import Iconify from '../../components/Iconify';
 // sections
 import { VerifyCodeForm } from '../../sections/auth/verify-code';
 // Images
-import LoginBack from '../../assets/image/LoginBack.jpeg'
+import LoginBack from '../../assets/image/AgentLogin.jpg'
 
 // ----------------------------------------------------------------------
 
@@ -29,7 +29,9 @@ export default function VerifyCode() {
   return (
     <Page title="Verify" sx={{
       height: 1,
-      backgroundImage: `url(${LoginBack})`
+      backgroundImage: `url(${LoginBack})`,
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: 'cover'
     }}>
       <RootStyle>
         <LogoOnlyLayout />
@@ -58,12 +60,12 @@ export default function VerifyCode() {
               <VerifyCodeForm />
             </Box>
 
-            <Typography variant="body2" align="center">
+            {/* <Typography variant="body2" align="center">
               Don’t have a code? &nbsp;
               <Link variant="subtitle2" underline="none" onClick={() => { }}>
                 Resend code
               </Link>
-            </Typography>
+            </Typography> */}
           </Box>
         </Container>
       </RootStyle>

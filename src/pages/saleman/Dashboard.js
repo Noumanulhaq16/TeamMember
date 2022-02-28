@@ -32,7 +32,7 @@ export default function ContractorApp() {
 
           <Grid item xs={12} md={3}>
             <AppWidgetSummary
-              title="My Customer"
+              title="My Agent"
               percent={0.2}
               total={4876}
               chartColor={theme.palette.chart.blue[0]}

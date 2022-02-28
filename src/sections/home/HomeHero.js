@@ -88,19 +88,17 @@ export default function HomeHero() {
         <Container>
           <ContentStyle>
             <m.div variants={varFade().inRight}>
-              <Typography variant="h1" sx={{ color: 'common.white' }}>
-                <Typography component="span" variant="h1" sx={{ color: 'primary.main' }}>
-                  &nbsp;Teams Track
-                </Typography>
+              <Typography variant="h1" sx={{ color: 'primary.main' }}>
+                  Team Member Tracker
               </Typography>
             </m.div>
 
-            <m.div variants={varFade().inRight}>
-              <Typography sx={{ color: 'common.white' }}>
+            {/* <m.div variants={varFade().inRight}> */}
+              {/* <Typography sx={{ color: 'common.white' }}> */}
                 {/* The starting point for your next project based on easy-to-customize MUI helps you build apps faster and
                 better. */}
-              </Typography>
-            </m.div>
+              {/* </Typography> */}
+            {/* </m.div> */}
 
             {/* <Stack spacing={2.5} alignItems="center" direction={{ xs: 'column', md: 'row' }}>
               <m.div variants={varFade().inRight}>

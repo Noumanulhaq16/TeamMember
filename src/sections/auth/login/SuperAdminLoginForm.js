@@ -28,8 +28,8 @@ export default function SuperAdminLoginForm() {
   });
 
   const defaultValues = {
-    email: 'superadmin@Teams.com',
-    password: '12345678',
+    email: '',
+    password: '',
     remember: true,
   };
 

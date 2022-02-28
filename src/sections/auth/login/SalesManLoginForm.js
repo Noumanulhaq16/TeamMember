@@ -33,8 +33,8 @@ export default function ContractorLoginForm() {
   });
 
   const defaultValues = {
-    email: 'contractor@Teams.com',
-    password: '12345678',
+    email: '',
+    password: '',
     remember: true,
   };
 

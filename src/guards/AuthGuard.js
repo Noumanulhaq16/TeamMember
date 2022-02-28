@@ -30,15 +30,13 @@ export default function AuthGuard({ children }) {
     if (UserRole === 'admin') {
       return <Navigate to={'/admin/login'} />
     }
-    if (UserRole === 'customer') {
+    if (UserRole === 'agent') {
       return <Navigate to={'/agent/login'} />
     }
-    if (UserRole === 'contractor') {
-      return <Navigate to={'/agent/login'} />
+    if (UserRole === 'saleman') {
+      return <Navigate to={'/saleman/login'} />
     }
-    if (UserRole === 'technician') {
-      return <Navigate to={'/technician/login'} />
-    }
+   
     return <Navigate to={'/'} />
   }
 

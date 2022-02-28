@@ -1,5 +1,5 @@
 // @mui
-import { Stack, Button, Typography } from '@mui/material';
+import { Stack, Button, Typography, Link } from '@mui/material';
 // hooks
 import useAuth from '../../../hooks/useAuth';
 // routes
@@ -17,21 +17,24 @@ export default function NavbarDocs() {
       spacing={3}
       sx={{ px: 5, pb: 5, mt: 10, width: 1, textAlign: 'center', display: 'block' }}
     >
-      <DocIllustration sx={{ width: 1 }} />
+      {/* <DocIllustration sx={{ width: 1 }} /> */}
 
       <div>
-        <Typography gutterBottom variant="subtitle1">
-          Hi, {user?.name}
-        </Typography>
-        <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-          Need help?
-          <br /> Please check our docs
+        <Typography variant="body1" sx={{ color: 'text.danger' }}>
+          All Right Resverd By
+          <br />
+          <Link>
+            TEAM MEMBER TRACKER
+          </Link>
+          <br />
+          Desigin By
+          <br />
+          <Link>
+            HNH TECH SOLUTION
+          </Link>
+
         </Typography>
       </div>
-
-      <Button href={PATH_DOCS} target="_blank" rel="noopener" variant="contained">
-        Documentation
-      </Button>
     </Stack>
   );
 }

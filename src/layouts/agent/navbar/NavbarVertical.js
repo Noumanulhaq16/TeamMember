@@ -17,6 +17,7 @@ import Scrollbar from '../../../components/Scrollbar';
 import { NavSectionVertical } from '../../../components/nav-section';
 //
 import navConfig from './NavConfig';
+import NavbarDocs from './NavbarDocs';
 import CollapseButton from './CollapseButton';
 // Images
 import Navbar from '../../../assets/image/Navbar.jpg'
@@ -61,9 +62,9 @@ export default function NavbarVertical({ isOpenSidebar, onCloseSidebar }) {
       sx={{
         height: 1,
         '& .simplebar-content': { height: 1, display: 'flex', flexDirection: 'column' },
-        backgroundImage: `url(${Navbar})`,
-        backgroundSize: 'cover',
-        backgroundPostion: 'no-repeat',
+        // backgroundImage: `url(${Navbar})`,
+        // backgroundSize: 'cover',
+        // backgroundPosition: '340px 0px',
       }}
     >
       <Stack
@@ -87,6 +88,7 @@ export default function NavbarVertical({ isOpenSidebar, onCloseSidebar }) {
       </Stack>
 
       <NavSectionVertical navConfig={navConfig} isCollapse={isCollapse} />
+      {/* {!isCollapse && <NavbarDocs />} */}
 
     </Scrollbar>
   );

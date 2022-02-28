@@ -5,16 +5,16 @@ import HeaderBreadcrumbs from '../../components/HeaderBreadcrumbs';
 import { PATH_ADMIN } from '../../routes/paths';
 import Approval from '../../sections/@SuperAdmin/CusApproval';
 
-export default function Customerapproval() {
+export default function Agentapproval() {
     const { themeStretch } = useSettings();
     return (
-        <Page title="Admin: Customer Approval">
+        <Page title="Admin: Agent Approval">
             <Container maxWidth={themeStretch ? false : 'xl'}>
                 <HeaderBreadcrumbs
-                    heading="Customer Approval"
+                    heading="Agent Approval"
                     links={[
                         { name: 'Dashboard', href: PATH_ADMIN.root },
-                        { name: 'Customer Approval' },
+                        { name: 'Agent Approval' },
                     ]}
                 />
                 <Approval />

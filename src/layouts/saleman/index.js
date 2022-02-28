@@ -14,7 +14,7 @@ import DashboardHeader from './header';
 import NavbarVertical from './navbar/NavbarVertical';
 import NavbarHorizontal from './navbar/NavbarHorizontal';
 // Images
-import LoginBack from '../../assets/image/LoginBack.jpeg'
+import DashBack from '../../assets/image/dash.jpeg'
 // ----------------------------------------------------------------------
 
 const MainStyle = styled('main', {
@@ -74,6 +74,9 @@ export default function ContractorLayout() {
               xs: `${HEADER.MOBILE_HEIGHT + 24}px`,
               lg: `${HEADER.DASHBOARD_DESKTOP_HEIGHT + 24}px`,
             },
+            backgroundImage: `url(${DashBack})`,
+            backgroundSize: 'cover',
+            backgroundPostion: 'no-repeat',
           }}
         >
           <Outlet />
@@ -87,7 +90,9 @@ export default function ContractorLayout() {
       sx={{
         display: { lg: 'flex' },
         minHeight: { lg: 1 },
-        backgroundImage: `url(${LoginBack})`
+        backgroundImage: `url(${DashBack})`,
+        backgroundSize: 'cover',
+        backgroundPostion: 'no-repeat',
       }}
     >
       <DashboardHeader isCollapse={isCollapse} onOpenSidebar={() => setOpen(true)} />

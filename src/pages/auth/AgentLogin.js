@@ -13,9 +13,9 @@ import Page from '../../components/Page';
 import Logo from '../../components/Logo';
 import Image from '../../components/Image';
 // sections
-import CustomerLoginForm from '../../sections/auth/login/AgentLoginForm';
+import AgentLoginForm from '../../sections/auth/login/AgentLoginForm';
 // Images
-import LoginBack from '../../assets/image/LoginBack.jpeg'
+import LoginBack from '../../assets/image/AgentLogin.jpg'
 import Team from '../../assets/image/logo_full.png';
 import LoginSide from '../../assets/image/LoginSide.jpg';
 
@@ -64,7 +64,7 @@ const ContentStyle = styled('div')(({ theme }) => ({
 
 // ----------------------------------------------------------------------
 
-export default function CustomerLogin() {
+export default function AgentLogin() {
   const { method } = useAuth();
 
   const smUp = useResponsive('up', 'sm');
@@ -72,7 +72,12 @@ export default function CustomerLogin() {
   const mdUp = useResponsive('up', 'md');
 
   return (
-    <Page title="Login" sx={{ backgroundImage: `url(${LoginBack})` }}>
+    <Page title="Login"
+      sx={{
+        backgroundImage: `url(${LoginBack})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover'
+      }}>
       <RootStyle>
         <HeaderStyle>
           <Logo />
@@ -86,40 +91,51 @@ export default function CustomerLogin() {
           )}
         </HeaderStyle>
 
-        {mdUp && (
+        {/* {mdUp && (
           <SectionStyle>
             <Image
               alt="login"
               src={LoginSide}
             />
           </SectionStyle>
-        )}
+        )} */}
 
         <Container maxWidth="sm">
           <ContentStyle>
             <Stack direction="row" alignItems="center" sx={{ mb: 5 }}>
               <Box sx={{ flexGrow: 1 }}>
                 <Typography variant="h4" gutterBottom>
-                  Sign in to Teams
+                  Sign in to Teams :    Agent Login
                 </Typography>
                 <Typography sx={{ color: 'text.secondary' }}>Enter your details below.</Typography>
               </Box>
 
-              <Tooltip title={capitalCase(method)} placement="right">
+              {/* <Tooltip title={capitalCase(method)} placement="right">
                 <>
                   <Image
                     disabledEffect
                     src={Team}
-                    sx={{ width: 32, height: 32 }}
+                    sx={{ width: 82, height: 32 }}
                   />
                 </>
-              </Tooltip>
+              </Tooltip> */}
             </Stack>
 
 
 
-            <CustomerLoginForm />
-
+            <AgentLoginForm />
+            <Typography variant="body2" align="center" sx={{ color: 'text.secondary', mt: 3 }}>
+             All Right Reserved By 
+              <Link underline="always" color="text.primary" href="#">
+            Team Member Tracker
+              </Link>
+              <br />
+              Design By
+              <Link underline="always" color="text.primary" href="#">
+               HNH Tech Solution
+              </Link>
+              .
+            </Typography>
             {!smUp && (
               <Typography variant="body2" align="center" sx={{ mt: 3 }}>
                 Don’t have an account?{' '}

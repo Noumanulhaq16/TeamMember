@@ -61,9 +61,9 @@ export default function NavbarVertical({ isOpenSidebar, onCloseSidebar }) {
       sx={{
         height: 1,
         '& .simplebar-content': { height: 1, display: 'flex', flexDirection: 'column' },
-        backgroundImage: `url(${Navbar})`,
-        backgroundSize: 'cover',
-        backgroundPostion: 'no-repeay',
+        // backgroundImage: `url(${Navbar})`,
+        // backgroundSize: 'cover',
+        // backgroundPosition: '340px 0px',
       }}
     >
       <Stack

@@ -69,15 +69,15 @@ export default function ConApproval() {
         SuperUser();
     }, []);
     const SuperUser = () => {
-        getApi(`${baseurl}/contractor/contractors`).then(({ data }) => {
-            const UserList = data.contractor;
+        getApi(`${baseurl}/saleman/salemen`).then(({ data }) => {
+            const UserList = data.Salemen;
             // console.log("Comapny", UserList.map((x) => x))
             setUserList(UserList)
         })
     }
     const Testing = (id) => {
 
-        postApi(`${baseurl}/superadmin/approvecontractor/${id}`).then(({ data }) => {
+        postApi(`${baseurl}/superadmin/approvesaleman/${id}`).then(({ data }) => {
             console.log('data', data);
             SuperUser();
             enqueueSnackbar('Successfully Approved');

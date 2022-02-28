@@ -3,7 +3,7 @@ import { PATH_ADMIN, PATH_AGENT, PATH_SALEMAN, PATH_SUPERADMIN } from './routes/
 
 // API
 // ----------------------------------------------------------------------
-export const HOST_API = 'http://overwatchapi.devml.xyz/' || 'https://overwatchapi.hnhclient.xyz';
+export const HOST_API = 'http://team-api.devml.xyz/' || 'http://team-api.devml.xyz/';
 
 export const FIREBASE_API = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -66,9 +66,9 @@ export const ICON = {
 
 
 export const defaultSettings = {
-  themeMode: 'light',
+  themeMode: 'dark',
   themeDirection: 'ltr',
-  themeColorPresets: 'orange',
+  themeColorPresets: 'cyan',
   themeLayout: 'horizontal',
   themeStretch: false,
 };

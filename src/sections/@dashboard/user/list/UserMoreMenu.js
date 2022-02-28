@@ -5,7 +5,7 @@ import { Link as RouterLink } from 'react-router-dom';
 // @mui
 import { MenuItem, IconButton } from '@mui/material';
 // routes
-import { PATH_CUSTOMER } from '../../../../routes/paths';
+// import { PATH_CUSTOMER } from '../../../../routes/paths';
 // components
 import Iconify from '../../../../components/Iconify';
 import MenuPopover from '../../../../components/MenuPopover';

@@ -68,6 +68,7 @@ export const PATH_AGENT = {
   root: ROOTS_AGENTS,
   general: {
     dashboard: path(ROOTS_AGENTS, '/dashboard'),
+    profile: path(ROOTS_AGENTS, '/profile'),
   },
 };
 

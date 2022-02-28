@@ -12,13 +12,13 @@ import useAuth from '../../hooks/useAuth';
 
 // ----------------------------------------------------------------------
 
-export default function CustomerApp() {
+export default function AgentApp() {
   const theme = useTheme();
   const { themeStretch } = useSettings();
 // console.log(useAuth());
 
   return (
-    <Page title="Customer: Dashboard">
+    <Page title="Agent: Dashboard">
       <Container maxWidth={themeStretch ? false : 'xl'}>
         <Grid container spacing={3}>
 
@@ -34,7 +34,7 @@ export default function CustomerApp() {
 
           <Grid item xs={12} md={3}>
             <AppWidgetSummary
-              title="My Customer"
+              title="My Agents"
               percent={0.2}
               total={4876}
               chartColor={theme.palette.chart.blue[0]}

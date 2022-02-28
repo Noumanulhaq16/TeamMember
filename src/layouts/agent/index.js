@@ -14,7 +14,7 @@ import DashboardHeader from './header';
 import NavbarVertical from './navbar/NavbarVertical';
 import NavbarHorizontal from './navbar/NavbarHorizontal';
 // Images
-import LoginBack from '../../assets/image/LoginBack.jpeg'
+import DashBack from '../../assets/image/dash.jpeg'
 // ----------------------------------------------------------------------
 
 const MainStyle = styled('main', {
@@ -40,7 +40,7 @@ const MainStyle = styled('main', {
 
 // ----------------------------------------------------------------------
 
-export default function CustomerLayout() {
+export default function AgentLayout() {
   const { collapseClick, isCollapse } = useCollapseDrawer();
 
   const { themeLayout } = useSettings();
@@ -74,7 +74,7 @@ export default function CustomerLayout() {
               xs: `${HEADER.MOBILE_HEIGHT + 24}px`,
               lg: `${HEADER.DASHBOARD_DESKTOP_HEIGHT + 24}px`,
             },
-            backgroundImage: `url(${LoginBack})`,
+            backgroundImage: `url(${DashBack})`,
             backgroundSize: 'cover',
             backgroundPostion: 'no-repeat',
           }}
@@ -90,7 +90,7 @@ export default function CustomerLayout() {
       sx={{
         display: { lg: 'flex' },
         minHeight: { lg: 1 },
-        backgroundImage: `url(${LoginBack})`,
+        backgroundImage: `url(${DashBack})`,
         backgroundSize: 'cover',
         backgroundPostion: 'no-repeat',
       }}
@@ -102,6 +102,7 @@ export default function CustomerLayout() {
       <MainStyle collapseClick={collapseClick}>
         <Outlet />
       </MainStyle>
+      
     </Box>
   );
 }

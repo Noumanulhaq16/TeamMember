@@ -69,15 +69,15 @@ export default function UserList() {
         SuperUser();
     }, []);
     const SuperUser = () => {
-        getApi(`${baseurl}/superadmin/customers`).then(({ data }) => {
-            const UserList = data.customers;
+        getApi(`${baseurl}/agent/agents`).then(({ data }) => {
+            const UserList = data.Agent;
             // console.log("Comapny", UserList.map((x) => x))
             setUserList(UserList)
         })
     }
     const Testing = (id) => {
 
-        postApi(`${baseurl}/superadmin/approvecustomer/${id}`).then(({ data }) => {
+        postApi(`${baseurl}/superadmin/approveagent/${id}`).then(({ data }) => {
             console.log('data', data);
             SuperUser();
             enqueueSnackbar('Successfully Approved');

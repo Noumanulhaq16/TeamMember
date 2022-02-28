@@ -21,10 +21,10 @@ export default function GuestGuard({ children }) {
     if (user?.role === 'admin') {
       return <Navigate to={PATH_ADMIN.root} />;
     }
-    if (user?.role === 'customer') {
+    if (user?.role === 'agent') {
       return <Navigate to={PATH_AGENT.root} />;
     }
-    if (user?.role === 'contractor') {
+    if (user?.role === 'saleman') {
       return <Navigate to={PATH_SALEMAN.root} />;
     }
   }

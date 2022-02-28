@@ -2,7 +2,7 @@ import { capitalCase } from 'change-case';
 import { Link as RouterLink } from 'react-router-dom';
 // @mui
 import { styled } from '@mui/material/styles';
-import { Box, Card, Link, Container, Typography, Tooltip } from '@mui/material';
+import { Box, Card, Link, Container, Typography, Tooltip, Stack } from '@mui/material';
 // hooks
 import useAuth from '../../hooks/useAuth';
 import useResponsive from '../../hooks/useResponsive';
@@ -15,7 +15,7 @@ import Image from '../../components/Image';
 // sections
 import { RegisterForm } from '../../sections/auth/register';
 // Images
-import LoginBack from '../../assets/image/LoginBack.jpeg'
+import LoginBack from '../../assets/image/AgentLogin.jpg'
 import Team from '../../assets/image/logo_full.png';
 
 // ----------------------------------------------------------------------
@@ -70,7 +70,11 @@ export default function Register() {
   const mdUp = useResponsive('up', 'md');
 
   return (
-    <Page title="Register"  sx={{ backgroundImage: `url(${LoginBack})` }}>
+    <Page title="Register" sx={{
+      backgroundImage: `url(${LoginBack})`,
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: 'cover'
+    }}>
       <RootStyle>
         <HeaderStyle>
           <Logo />
@@ -84,50 +88,54 @@ export default function Register() {
           )}
         </HeaderStyle>
 
-        {mdUp && (
+        {/* {mdUp && (
           <SectionStyle>
             <Typography variant="h3" sx={{ px: 5, mt: 10, mb: 5 }}>
-            Team Track
+              Team Track
             </Typography>
             <Image
               alt="register"
               src={Team}
             />
           </SectionStyle>
-        )}
+        )} */}
 
         <Container>
           <ContentStyle>
-            <Box sx={{ mb: 5, display: 'flex', alignItems: 'center' }}>
+            <Stack direction="row" alignItems="center" sx={{ mb: 5 }}>
               <Box sx={{ flexGrow: 1 }}>
                 <Typography variant="h4" gutterBottom>
-                Team Track
+                  Sign in to Teams : Saleman Register
                 </Typography>
+                <Typography sx={{ color: 'text.secondary' }}>Enter your details below.</Typography>
               </Box>
-              <Tooltip title={capitalCase(method)}>
+{/* 
+              <Tooltip title={capitalCase(method)} placement="right">
                 <>
                   <Image
                     disabledEffect
                     src={Team}
-                    sx={{ width: 32, height: 32 }}
+                    sx={{ width: 82, height: 32 }}
                   />
                 </>
-              </Tooltip>
-            </Box>
+              </Tooltip> */}
+            </Stack>
+         
 
             <RegisterForm />
 
-            {/* <Typography variant="body2" align="center" sx={{ color: 'text.secondary', mt: 3 }}>
-              By registering, I agree to Minimal&nbsp;
+            <Typography variant="body2" align="center" sx={{ color: 'text.secondary', mt: 3 }}>
+              All Right Reserved By
               <Link underline="always" color="text.primary" href="#">
-                Terms of Service
+                Team Member Tracker
               </Link>
-              and
+              <br />
+              Design By
               <Link underline="always" color="text.primary" href="#">
-                Privacy Policy
+                HNH Tech Solution
               </Link>
               .
-            </Typography> */}
+            </Typography>
 
             {!smUp && (
               <Typography variant="body2" sx={{ mt: 3, textAlign: 'center' }}>
@@ -140,6 +148,6 @@ export default function Register() {
           </ContentStyle>
         </Container>
       </RootStyle>
-    </Page>
+    </Page >
   );
 }

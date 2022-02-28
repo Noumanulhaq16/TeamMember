@@ -22,7 +22,7 @@ export default function Logo({ disabledLink = false, sx }) {
 
   const logo = (
     <>
-      <Box sx={{ margin: "auto", width: 40, height: 40, ...sx, textAlign: 'center' }}>
+      <Box sx={{ margin: "auto", width: 120, height: 40, ...sx, textAlign: 'center' }}>
         <img src={logoss} alt="logo" />
       </Box >
 

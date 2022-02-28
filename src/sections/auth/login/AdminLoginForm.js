@@ -28,8 +28,8 @@ export default function AdminLoginForm() {
   });
 
   const defaultValues = {
-    email: 'admin@Teams.com',
-    password: '12345678',
+    email: '',
+    password: '',
     remember: true,
   };
 

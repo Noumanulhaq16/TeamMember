@@ -5,7 +5,7 @@ import { Link as RouterLink, useNavigate } from 'react-router-dom';
 import { alpha } from '@mui/material/styles';
 import { Box, Divider, Typography, Stack, MenuItem } from '@mui/material';
 // routes
-import { PATH_SUPERADMIN, PATH_AUTH } from '../../../routes/paths';
+import { PATH_AGENT, PATH_AUTH } from '../../../routes/paths';
 // hooks
 import useAuth from '../../../hooks/useAuth';
 import useIsMountedRef from '../../../hooks/useIsMountedRef';
@@ -17,14 +17,14 @@ import { IconButtonAnimate } from '../../../components/animate';
 // ----------------------------------------------------------------------
 
 const MENU_OPTIONS = [
-  {
-    label: 'Home',
-    linkTo: '/',
-  },
   // {
-  //   label: 'Profile',
-  //   linkTo: PATH_SUPERADMIN.user.profile,
+  //   label: 'Home',
+  //   linkTo: '/',
   // },
+  {
+    label: 'Profile', 
+    linkTo: PATH_AGENT.general.profile,
+  },
   // {
   //   label: 'Settings',
   //   linkTo: PATH_SUPERADMIN.user.account,

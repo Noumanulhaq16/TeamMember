@@ -14,7 +14,7 @@ import { ResetPasswordForm } from '../../sections/auth/reset-password';
 // assets
 import { SentIcon } from '../../assets';
 // Images
-import LoginBack from '../../assets/image/LoginBack.jpeg'
+import LoginBack from '../../assets/image/AgentLogin.jpg'
 
 // ----------------------------------------------------------------------
 
@@ -33,7 +33,12 @@ export default function ResetPassword() {
   const [sent, setSent] = useState(false);
 
   return (
-    <Page title="Reset Password" sx={{ height: 1, backgroundImage: `url(${LoginBack})` }}>
+    <Page title="Reset Password" sx={{
+      height: 1,
+      backgroundImage: `url(${LoginBack})`,
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: 'cover'
+    }}>
       <RootStyle>
         <LogoOnlyLayout />
 
